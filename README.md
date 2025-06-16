@@ -1,0 +1,1 @@
+# squash-club-medjimurje-season-rankings-calculator
