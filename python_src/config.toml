@@ -1,12 +1,12 @@
 season = "2024-2025"
 
 files = [
-    "../rankings/2024-2025/Round1.txt",
-    "../rankings/2024-2025/Round2.txt",
-    "../rankings/2024-2025/Round3.txt",
-    "../rankings/2024-2025/Round4.txt",
-    "../rankings/2024-2025/Round5.txt",
-    "../rankings/2024-2025/Round6.txt"
+    "../records/2024-2025/Round1.txt",
+    "../records/2024-2025/Round2.txt",
+    "../records/2024-2025/Round3.txt",
+    "../records/2024-2025/Round4.txt",
+    "../records/2024-2025/Round5.txt",
+    "../records/2024-2025/Round6.txt"
 ]
 
 save_to_csv = true
