@@ -20,6 +20,7 @@ def main():
         files = config_data['files']
         save_to_csv = config_data['save_to_csv']
         print_to_console = config_data['print_to_console']
+    # !with
 
     table = {}
 
@@ -44,9 +45,12 @@ def main():
 
                     table[name][current_file_idx] = points
                     points -= POINTS_DIF
+                # !if
+            # !for
+        # !with
 
         current_file_idx += 1
-    # !for file_path in files
+    # !for
 
     # Sort dict in descending order by total points.
     final_table = sorted(table.items(), key=lambda item: sum(item[1]), reverse=True)
@@ -59,10 +63,12 @@ def main():
             print(f"{pos_str:<5} {name:20}", end='')
             for p in points:
                 print(f"{p:5d}", end='')
+            # !for
             print(f"{sum(points):>10}")
 
             pos += 1
-    # !if print_to_console
+        # !for
+    # !if
 
     if save_to_csv:
         pos = 1
@@ -71,19 +77,24 @@ def main():
             line = f"{pos}.;{name};"
             for p in points:
                 line += f"{p};"
+            # !for
             line += f"{sum(points)}\n"
 
             lines.append(line)
 
             pos += 1
+        # !for
 
         with open(f"standings_{season}.csv", 'w', encoding="utf-8") as csv_file:
             for line in lines:
                 csv_file.write(line)
-    # !if save_to_csv
+            # !for
+        # !with
+    # !if
 # !def main
 
 
 
 if __name__ == '__main__':
     main()
+# !__main__
