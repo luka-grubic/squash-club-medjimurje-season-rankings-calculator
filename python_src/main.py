@@ -2,7 +2,8 @@ import tomllib
 
 
 
-MAX_POINTS = 500
+MAX_POINTS = 250
+POINTS_DIF = 5
 
 
 
@@ -42,7 +43,7 @@ def main():
                         table[name] = [0] * len(files)
 
                     table[name][current_file_idx] = points
-                    points -= 5
+                    points -= POINTS_DIF
 
         current_file_idx += 1
     # !for file_path in files
